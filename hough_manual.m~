@@ -1,0 +1,17 @@
+theta = 0:0.01:2*pi;
+
+x = [10,20,30];
+y = [10,20,30];
+
+
+% in radians
+phase = pi/2;
+rho_max = (x.^2 + y.^2).^(1/2)
+ 
+hold on;
+plot(theta,rho_max(1).*sin(theta+phase))
+plot(theta,rho_max(2).*sin(theta+phase))
+plot(theta,rho_max(3).*sin(theta+phase))
+saveas(gc'test.jpg');
+grid on;
+hold off;
